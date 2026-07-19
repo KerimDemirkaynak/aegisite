@@ -29,6 +29,7 @@ jobs:
           cache: npm
 
       - name: Setup Pages
+        id: pages # BURASI ÖNEMLİ: base_url'i çekebilmek için id ekledik
         uses: actions/configure-pages@v5
 
       - name: Setup Hugo
@@ -46,8 +47,8 @@ jobs:
       - name: Build production website
         env:
           HUGO_ENVIRONMENT: production
-          # Hugo'ya sitenin kök dizinini ve alt dizinini açıkça belirtiyoruz
-          HUGO_BASEURL: "https://kerimdemirkaynak.github.io/aegisite/" 
+          # GitHub'ın repository'ne göre otomatik atadığı kök adresi kullanıyoruz
+          HUGO_BASEURL: ${{ steps.pages.outputs.base_url }}/
         run: npm run build
 
       - name: Upload Pages artifact
