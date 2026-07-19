@@ -46,6 +46,8 @@ jobs:
       - name: Build production website
         env:
           HUGO_ENVIRONMENT: production
+          # Hugo'ya sitenin kök dizinini ve alt dizinini açıkça belirtiyoruz
+          HUGO_BASEURL: "https://kerimdemirkaynak.github.io/aegisite/" 
         run: npm run build
 
       - name: Upload Pages artifact
