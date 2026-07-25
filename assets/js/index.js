@@ -164,3 +164,31 @@ Source:
     }
   }
 }());
+
+// --- DİL YÖNLENDİRME KODU ---
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem('prefLang');
+    const langLinks = document.querySelectorAll('[hreflang]');
+
+    langLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            localStorage.setItem('prefLang', link.getAttribute('hreflang').toLowerCase());
+        });
+    });
+
+    if (savedLang) return;
+
+    const browserLang = (navigator.language || navigator.userLanguage).split('-')[0].toLowerCase();
+    
+    const langMap = { 'tr': 'tr-tr', 'es': 'es-us', 'zh': 'zh-cn', 'en': 'en' };
+    const targetLangCode = langMap[browserLang] || 'en';
+
+    const targetElement = document.querySelector(`link[hreflang="${targetLangCode}"], a[hreflang="${targetLangCode}"]`);
+
+    if (targetElement && targetElement.href !== window.location.href) {
+        localStorage.setItem('prefLang', targetLangCode);
+        window.location.replace(targetElement.href);
+    } else {
+        localStorage.setItem('prefLang', (document.documentElement.lang || 'en').toLowerCase());
+    }
+});
