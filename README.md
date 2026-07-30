@@ -1,10 +1,6 @@
 AegiSite
 ========
 
-> **Development has moved to
-> [TypesettingTools/aegisite](https://github.com/TypesettingTools/aegisite).**
-> Please open new issues and pull requests there.
-
 > New AegiSite Powered by Hugo
 
 
