@@ -9,7 +9,7 @@
   "browserslist": [
     "defaults"
   ],
-  "repository": "https://github.com/Aegisub/aegisite",
+  "repository": "https://github.com/TypesettingTools/aegisite",
   "license": "MIT",
   "scripts": {
     "create": "hugo new",
