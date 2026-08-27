@@ -168,7 +168,7 @@ instead.
 When adding subtitles to a video file for distribution, care needs to be taken
 to also add all the font files used in the subtitle file. You can automatically
 collect all used font files using Aegisub's [Fonts
-Collector](Fonts_Collector.md), but you will need to make sure to then
+Collector]({{< relref "Fonts_Collector.md" >}}), but you will need to make sure to then
 distribute them along with your subtitles.
 
 To check whether all fonts for a given subtitle file are present in a video

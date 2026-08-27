@@ -22,7 +22,7 @@ confusing. This page explains the meaning and effect of each parameter in
 detail, and gives instructions on how to set or adjust these parameters in all
 of the common cases you may encounter.
 
-If you are not interested in the theory, the [examples](#examples) section
+If you are not interested in the theory, the [examples]({{< relref "#examples" >}}) section
 should cover the vast majority of cases you're likely to run into in the wild.
 
 ## Script Resolution
@@ -144,12 +144,12 @@ Resolution in any way, even if they differ from the resolution of the video you
 are planning to apply your subtitles to.
 The only exception here is if your video is a cropped version of the original
 one or vice-versa; for this case refer to the section on
-[adapting subtitles to new videos](#step-3-apply-to-your-new-video)
+[adapting subtitles to new videos]({{< relref "#step-3-apply-to-your-new-video" >}})
 below.
 
 When you are modifying an existing subtitle file that does *not* already have
 a Layout Resolution set, refer to the section on
-[adapting subtitles to new videos](#step-3-apply-to-your-new-video).
+[adapting subtitles to new videos]({{< relref "#step-3-apply-to-your-new-video" >}}).
 
 Finally, note that the "blur strength" item above *only* applies to `\blur` tags
 and not to `\be`.
@@ -392,7 +392,7 @@ There are a lot of different cases here, but the large-scale process is always t
 First of all, completely forget about your new video file for a moment and, if possible,
 find the video that the subtitles were originally meant to be applied to.
 Then, ensure that they look correct when played with that video in one of the
-[recommended video players](Attaching_subtitles_to_video.md).
+[recommended video players]({{< relref "Attaching_subtitles_to_video.md" >}}).
 In particular, check that:
 
 - Text looks proportional
@@ -441,7 +441,7 @@ is a cropped version of the original video or vice-versa.
 For example, if your original video was a 4:3 video encoded in 1920×1080
 with black bars included in the video, and your new video is a 1440×1080
 encode without any black bars, then you will need to adjust the subtitles accordingly.
-You can do this using Aegisub's [Resolution Resampler](Resolution_Resampler.md):
+You can do this using Aegisub's [Resolution Resampler]({{< relref "Resolution_Resampler.md" >}}):
 Open your updated subtitle file in Aegisub together with the new video.
 (This will probably result in the subtitles not looking correct for the time being,
 but that's fine.)
@@ -482,7 +482,7 @@ played in a video player.
 In this case, the YCbCr Matrix should *not* be replaced with the new video's matrix.
 However, if you want to then work on this subtitle file with this video further,
 it would be best to resample the file to the new YCbCr Matrix using Aegisub's
-[Resolution Resampler](Resolution_Resampler.md) (leaving the resolution unchanged).
+[Resolution Resampler]({{< relref "Resolution_Resampler.md" >}}) (leaving the resolution unchanged).
 
 ## Examples
 
@@ -517,7 +517,7 @@ If the video does not yet have a Layout Resolution set, you should set it to 128
 If the original video and subtitle file already used a BT.709 color matrix,
 you do not need to change the YCbCr Matrix either.
 If the original video or subtitle file used a different matrix, refer to
-[cases 2 and 3](#case-2-reencode-with-different-matrix)
+[cases 2 and 3]({{< relref "#case-2-reencode-with-different-matrix" >}})
 for adjusting the YCbCr Matrix above for how to proceed.
 
 ##### Example 4: Adapting a file from a 1920×1080 4:3 video with black bars to a cropped 1440×1080 video
@@ -563,7 +563,7 @@ If you plan to continue working on your subtitles with this video file, you
 should probably adjust it to match your video's matrix.
 However, how this should be done (whether the YCbCr Matrix should simply be changed
 or whether it should be resampled) depends on your specific case.
-For more information, check [cases 2 and 3](#case-2-reencode-with-different-matrix)
+For more information, check [cases 2 and 3]({{< relref "#case-2-reencode-with-different-matrix" >}})
 for adjusting the YCbCr Matrix above.
 
 ### Tagging a video's color space
